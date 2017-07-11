@@ -1,0 +1,13 @@
+
+---
+
+ - hosts: myhost 
+   user: root
+   vars:
+    motd_wel: 'Welcome\n'
+   tasks:
+   - name: sample motd
+     copy:
+      dest: /home/test/node/testing 
+      content: "{{motd_wel}}"
+ 
